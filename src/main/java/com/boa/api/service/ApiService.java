@@ -77,7 +77,7 @@ public class ApiService {
                     ligne = br.readLine();
                 }
                 // result = IOUtils.toString(conn.getInputStream(), "UTF-8");
-                log.info("newInward result ===== [{}]", result);
+                log.info("loginMpay result ===== [{}]", result);
                 // if(result.contains(";")) result = result.replace(";", " ");
                 obj = new JSONObject(result);
                 if (obj.toString() != null && !obj.isNull("token")) {
@@ -251,7 +251,7 @@ public class ApiService {
                     ligne = br.readLine();
                 }
                 // result = IOUtils.toString(conn.getInputStream(), "UTF-8");
-                log.info("newInward result ===== [{}]", result);
+                log.info("souscription result ===== [{}]", result);
                 // if(result.contains(";")) result = result.replace(";", " ");
                 obj = new JSONObject(result);
                 if (obj.toString() != null && !obj.isNull("codeRetour") && obj.getInt("codeRetour") == 0) {

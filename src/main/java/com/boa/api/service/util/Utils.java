@@ -50,7 +50,7 @@ public class Utils {
 
             conn.setConnectTimeout(applicationProperties.getTimeOut()); // 5000 ms <=> 5s
             conn.setReadTimeout(applicationProperties.getTimeOut()); // 5000 ms <=> 5s
-
+            // log.info("conn [{}]", conn.getContent());
             // tracking.setRequestTr(jsonString);
             os = conn.getOutputStream();
             byte[] postDataBytes = params.getBytes();
