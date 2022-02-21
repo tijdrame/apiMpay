@@ -171,6 +171,7 @@ public class ApiService {
                     genericResp.getResponseReference()
                 );
         }
+        trackingService.save(tracking);
         return genericResp;
     }
 
@@ -329,6 +330,7 @@ public class ApiService {
                     genericResp.getResponseReference()
                 );
         }
+        trackingService.save(tracking);
         return genericResp;
     }
 
