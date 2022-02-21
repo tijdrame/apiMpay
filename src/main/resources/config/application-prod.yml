@@ -81,12 +81,18 @@ spring:
 #     ciphers: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 ,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 ,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 ,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA256,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA,TLS_RSA_WITH_CAMELLIA_256_CBC_SHA,TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA,TLS_RSA_WITH_CAMELLIA_128_CBC_SHA
 # ===================================================================
 server:
-  port: 8080
-  shutdown: graceful # see https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-graceful-shutdown
-  compression:
-    enabled: true
-    mime-types: text/html,text/xml,text/plain,text/css,application/javascript,application/json,image/svg+xml
-    min-response-size: 1024
+  port: 448
+  ssl:
+    key-store: classpath:config/tls/keystore.p12
+    key-store-password: THBS4life
+    key-store-type: PKCS12
+    key-alias: aerd
+#server:
+# port: 8080
+#compression:
+# enabled: true
+#mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
+#min-response-size: 1024
 
 # ===================================================================
 # JHipster specific properties
@@ -110,7 +116,7 @@ jhipster:
         # - In the JHipster Registry (which includes a Spring Cloud Config server)
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: NGIwNTY2NWVjZjYyMGNhYWRkZGNjMmNiOGExYjFiNTNmZDk3ZmM3MmRhMmM1OWRkMGJkZDE0NjljMDhhZDM0YjQ5YzViNmNlMmIzNzBmZmVkMmUzMTJhZGNlZmQ1MmQzNDE2NWE0ODY5MWIzZDk1YWI1MmZkMzNkN2QzNTMxZjk=
+        base64-secret: NmY0NGY2MTUxOTM4MjI3M2MyZTExOWEyMjIzMjUwOWU5N2NkYWVhNThjMDY0YTM0ZTc4M2ViOTI0NzczY2Q1ZjFiNmUwZmY0MjYxNDcwNzVkNDhlYzM4NDk1OWJjZGI0MzNiMjhjODg5NDBhZjc4NTM4NTNmMTgyYzk3NjVjOWU=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
