@@ -1,7 +1,7 @@
 {
   "name": "api-ncr",
   "version": "0.0.0",
-  "description": "Description for apiNCR",
+  "description": "Description for apiMpay",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
