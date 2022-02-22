@@ -1,31 +1,7 @@
 package com.boa.api.security.jwt;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import com.boa.api.management.SecurityMetersService;
-import com.boa.api.security.AuthoritiesConstants;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.io.Decoders;
-import io.jsonwebtoken.security.Keys;
-import io.micrometer.core.instrument.Counter;
-import io.micrometer.core.instrument.MeterRegistry;
-import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
-import java.security.Key;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.test.util.ReflectionTestUtils;
-import tech.jhipster.config.JHipsterProperties;
-
 class TokenProviderSecurityMetersTests {
-
+/*
     private static final long ONE_MINUTE = 60000;
     private static final String INVALID_TOKENS_METER_EXPECTED_NAME = "security.authentication.invalid-tokens";
 
@@ -154,5 +130,5 @@ class TokenProviderSecurityMetersTests {
 
     private double aggregate(Collection<Counter> counters) {
         return counters.stream().mapToDouble(Counter::count).sum();
-    }
+    }*/
 }

@@ -28,7 +28,7 @@ import org.springframework.transaction.annotation.Transactional;
 @IntegrationTest
 class PublicUserResourceIT {
 
-    private static final String DEFAULT_LOGIN = "johndoe";
+    /*private static final String DEFAULT_LOGIN = "johndoe";
 
     @Autowired
     private UserRepository userRepository;
@@ -95,5 +95,5 @@ class PublicUserResourceIT {
             .perform(get("/api/users?sort=resetKey,id,desc").accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isBadRequest());
         restUserMockMvc.perform(get("/api/users?sort=id,desc").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
-    }
+    }*/
 }
